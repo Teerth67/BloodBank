@@ -27,9 +27,14 @@ app.use("/api/v1/inventory", require("./routes/inventoryRoutes"));
 app.use("/api/v1/analytics", require("./routes/analyticRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
 app.use(express.static(path.join(__dirname,'./client/build')))
-app.get("*",function(req,res){
-    res.sendFile(path.join(__dirname,"./client/build/index.html"))
-})
+const __dirname1=path.resolve()
+if(process.env.DEV_MODE==="development"){
+    app.use(express.static(path.join(__dirname1,"./client/build")))
+    app.get("*",function(req,res){
+        res.sendFile(path.resolve(__dirname1,"client","build","index.html"))
+    })
+}
+
 app.listen(PORT,()=>{
     console.log(`Node server running on port ${PORT}`)
    
