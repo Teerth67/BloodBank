@@ -17,9 +17,13 @@ import OrgList from './pages/Admin/OrgList';
 import HospitalList from './pages/Admin/Hospital';
 import DonarList from './pages/Admin/DonarList';
 import AdminHome from './pages/Admin/AdminHome';
+import Home from './Home/HOME';
+import PetHealthTracking from './components/Pettracker/Pettracker';
+
 function App() {
   return (
     <div className="App">
+      
      <ToastContainer />
      <Routes>
       <Route path="/donar" element={
@@ -86,13 +90,14 @@ function App() {
       
       }/>
      
-      <Route path="/" element={
+      <Route path="/home" element={
         <ProtectedRoute><HomePage/></ProtectedRoute>
       
       }/>
+      <Route path="/" element={<PublicRoute><Home/></PublicRoute>}/>
       <Route path="/login" element={<PublicRoute><Login/></PublicRoute>}/>
       <Route path="/register" element={<PublicRoute><Register/></PublicRoute>}/>
-
+      <Route path="/health-tracking" element={<PetHealthTracking />} />
      </Routes>
     </div>
   );

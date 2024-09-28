@@ -96,14 +96,13 @@ const Modal = () => {
                 <option defaultValue={"Open this select menu"}>
                   Open this select menu
                 </option>
-                <option value={"O+"}>O+</option>
-                <option value={"O-"}>O-</option>
-                <option value={"AB+"}>AB+</option>
-                <option value={"AB-"}>AB-</option>
-                <option value={"A+"}>A+</option>
-                <option value={"A-"}>A-</option>
-                <option value={"B+"}>B+</option>
-                <option value={"B-"}>B-</option>
+                <option value={"DEA 1.1"}>DEA 1.1</option>
+  <option value={"DEA 1.2"}>DEA 1.2</option>
+  <option value={"DEA 3"}>DEA 3</option>
+  <option value={"DEA 4"}>DEA 4</option>
+  <option value={"DEA 5"}>DEA 5</option>
+  <option value={"DEA 7"}>DEA 7</option>
+
               </select>
               <InputType
                 labelText={"Donar Email"}
