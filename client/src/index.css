@@ -45,15 +45,15 @@
   }
   100% {
     transform: rotate(360deg);
-  }
+  };
 }
 .navbar {
-  background-color: black !important;
+
   color: white !important;
 }
 .nav-link,
 .navbar-brand {
-  background-color: black !important;
+ 
   color: white !important;
 }
 

@@ -26,7 +26,7 @@ const DonarList = () => {
   const handelDelete = async (id) => {
     try {
       let answer = window.prompt(
-        "Are You SUre Want To Delete This Donar",
+        "Are You Sure Want To Delete This Donar",
         "Sure"
       );
       if (!answer) return;
